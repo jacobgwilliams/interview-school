@@ -13,3 +13,4 @@ quad_g65:
 library_4c:
   room_number: "C"
   floor: "4"
+  building: quad

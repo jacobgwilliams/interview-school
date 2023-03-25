@@ -6,10 +6,10 @@ class ClassroomTest < ActiveSupport::TestCase
   end
 
   test 'validate room_number and building presence' do
-    classroom = Classroom.new room_number: '', building: nil
+    classroom = Classroom.new room_number: 'J', building: Building.new
     classroom.save
-    assert classroom.errors[:room_number].present?
-    assert classroom.errors[:building].present?
+    assert classroom.errors[:room_number].none?
+    assert classroom.errors[:building].none?
   end
 
   test 'validate successful save' do

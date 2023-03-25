@@ -48,6 +48,7 @@
           <td><%= available_section.teacher_subject.teacher.first_and_last_name %></td>
           <td><%= building_name + ': ' + available_section_times.classroom.room_number %></td>
           <td><%= available_section_times.day %> <%= to_time_string(available_section_times.start_time) %> - <%= to_time_string(available_section_times.end_time) %></td>
+          <td><%= link_to 'Enroll', students_enroll_path(available_section), method: 'put' %></td>
         </tr>
       <% end %>
     <% end %>

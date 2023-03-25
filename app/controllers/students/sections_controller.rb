@@ -8,6 +8,12 @@ module Students
       redirect_to students_root_url
     end
 
+    def unenroll
+      student_section = StudentSection.find_by(student: @student, section: @section)
+      student_section.destroy!
+      redirect_to students_root_url
+    end
+
     private
 
     def set_section

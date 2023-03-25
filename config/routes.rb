@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   namespace 'students' do
     root to: 'homepage#index'
     put '/section/:id/enroll', to: 'sections#enroll', as: 'enroll'
+    put '/section/:id/unenroll', to: 'sections#unenroll', as: 'unenroll'
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

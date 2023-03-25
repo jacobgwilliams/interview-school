@@ -21,6 +21,7 @@
           <td><%= enrolled_section.teacher_subject.teacher.first_and_last_name %></td>
           <td><%= building_name + ': ' + enrolled_section_times.classroom.room_number %></td>
           <td><%= enrolled_section_times.day %> <%= to_time_string(enrolled_section_times.start_time) %> - <%= to_time_string(enrolled_section_times.end_time) %></td>
+          <td><%= link_to 'Unenroll', students_unenroll_path(enrolled_section), method: 'put' %></td>
         </tr>
       <% end %>
     <% end %>
